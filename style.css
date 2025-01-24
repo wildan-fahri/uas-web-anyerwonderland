@@ -1,0 +1,39 @@
+.banner {
+    /* Background gambar untuk header content / Landing page */
+    background: url("images/landing-update.jpg") 
+    no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #fff;
+}
+
+.btn-bubble {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.btn-bubble::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: bubble 0.6s ease-out;
+    pointer-events: none;
+    transform: scale(0);
+}
+@keyframes bubble {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.btn-bubble:hover {
+        transform: scale(1.1);
+}
